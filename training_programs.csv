@@ -1,0 +1,40 @@
+soc_code,occ_title,program_name,college,program_type,credential,url,source
+11-9021,Construction Managers,Maine Workforce Development Compact,Workforce Initiative,bootcamp,"Grants up to $1,200 per employee for construction firms to train staff in safety, project management, or new technical skills.",https://www.mccs.me.edu/workforce-training/maine-workforce-development-compact/,workforce_initiative
+17-2051,Civil Engineers,Transfer ME (Pre-Engineering),Workforce Initiative,bootcamp,Proactive transfer pathway for students with 30+ credits to move from MCCS to University of Maine Engineering programs.,https://legislature.maine.gov/doc/12341,workforce_initiative
+17-2051,Civil Engineers,Advanced Technology Centers,Workforce Initiative,bootcamp,"Hands-on labs at SMCC (Brunswick) for Robotics, Hydraulics, and Electrical Simulation training.",,workforce_initiative
+47-1011,First-Line Supervisors,Foreman,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2031,Carpenters,Bridge Carpenter/Heavy Highway,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2031,Carpenters,Construction Carpenter,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2031,Carpenters,Construction Craft Concrete Laborer,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2031,Carpenters,Construction Specialist,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2031,Carpenters,Fencing Installer,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2031,Carpenters,Marine Carpenter - Heavy Civil,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2031,Carpenters,Construction Technology,SMCC,associate,AAS Degree,https://www.smccme.edu/academics/pathways/industrial-technology-transportation/construction-technology-associate-degree/,community_college
+47-2031,Carpenters,Building Construction Technology,CMCC,associate_or_certificate,"AAS Degree, Certificate",https://www.cmcc.edu/academics/programs/programs-of-study/building-construction-technology/,community_college
+47-2031,Carpenters,Building Construction,EMCC,associate_or_certificate,"AAS Degree, Certificate",https://www.emcc.edu/academics/programs/programs-of-study/building-construction/,community_college
+47-2031,Carpenters,Maine Construction Academy (MCA),Workforce Initiative,bootcamp,"Immersion Programs: 4-week, tuition-free intensive training in high-demand trades. Includes hands-on skills and guaranteed job interviews.",https://buildingmaine.com/immersion-program,workforce_initiative
+47-2071,Paving & Tamping Operators,Maine Construction Academy (MCA),Workforce Initiative,bootcamp,"Immersion Programs: 4-week, tuition-free intensive training in high-demand trades. Includes hands-on skills and guaranteed job interviews.",https://buildingmaine.com/immersion-program,workforce_initiative
+47-2072,Pile Driver Operators,Crane Operator,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2073,Operating Engineers,Construction Equipment Operator,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2073,Operating Engineers,Crane Mechanic,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2073,Operating Engineers,Heavy Equipment Operations,WCCC,certificate,Certificate,https://wccc.me.edu/academics/programs/programs-study/heavy-equipment-operations/,community_college
+47-2073,Operating Engineers,Heavy Equipment Maintenance,WCCC,certificate,Certificate,https://wccc.me.edu/academics/programs/programs-study/heavy-equipment-maintenance/,community_college
+47-2081,Drywall & Ceiling Tile Installers,Maine Construction Academy (MCA),Workforce Initiative,bootcamp,"Immersion Programs: 4-week, tuition-free intensive training in high-demand trades. Includes hands-on skills and guaranteed job interviews.",https://buildingmaine.com/immersion-program,workforce_initiative
+47-2111,Electricians,Electrician,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2132,"Insulation Workers, Mechanical",Firestopping Installer,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2132,"Insulation Workers, Mechanical",Firestopping Technician,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2151,Pipelayers,Earthworks Laborer,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2152,Plumbers & Pipefitters,Solar Mechanical Installation Technician,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2152,Plumbers & Pipefitters,Plumbing & Heating Technology,CMCC,associate,AAS Degree,https://www.cmcc.edu/academics/programs/programs-of-study/plumbing-and-heating-technology/,community_college
+47-2152,Plumbers & Pipefitters,HVAC/R Technology,CMCC,associate_or_certificate,"AAS Degree, Certificate",https://www.cmcc.edu/academics/programs/programs-of-study/hvacr/,community_college
+47-2152,Plumbers & Pipefitters,"Refrigeration, AC & Heating",EMCC,associate_or_certificate,"AAS Degree, Certificate",https://www.emcc.edu/academics/programs/programs-of-study/refrigeration-air-conditioning-heating/,community_college
+47-2152,Plumbers & Pipefitters,Alfond Center: Trades Track,Workforce Initiative,bootcamp,"Funding for short-term certifications in Carpentry, HVAC, Plumbing, and Welding. Covers 50%–100% of costs.",https://alfondcenter.mccs.me.edu/construction,workforce_initiative
+47-2152,Plumbers & Pipefitters,TREC Program,Workforce Initiative,bootcamp,"Training for Residential Energy Contractors: Expands the pipeline for HVAC technicians and heat pump installers at CMCC, EMCC, WCCC, and NMCC.",https://www.maine.gov/energy/initiatives/infrastructure/contractor-training-grants,workforce_initiative
+47-2152,Plumbers & Pipefitters,Plumbing,EMCC,certificate,Certificate,https://www.emcc.edu/academics/programs/programs-of-study/plumbing/,community_college
+47-2152,Plumbers & Pipefitters,Plumbing,KVCC,certificate,Certificate,https://www.kvcc.me.edu/academics/programs-of-study/plumbing/,community_college
+47-2171,Reinforcing Iron & Rebar Workers,Maine Construction Academy (MCA),Workforce Initiative,bootcamp,"Immersion Programs: 4-week, tuition-free intensive training in high-demand trades. Includes hands-on skills and guaranteed job interviews.",https://buildingmaine.com/immersion-program,workforce_initiative
+47-2221,Structural Iron and Steel Workers,Welder,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-2221,Structural Iron and Steel Workers,Industrial Welding Techniques,YCCC,certificate,Short-term Training,https://www.yccc.edu/degree/industrialweldingtechniques/,community_college
+47-4021,Elevator & Escalator Installers,Maine Construction Academy (MCA),Workforce Initiative,bootcamp,"Immersion Programs: 4-week, tuition-free intensive training in high-demand trades. Includes hands-on skills and guaranteed job interviews.",https://buildingmaine.com/immersion-program,workforce_initiative
+47-4051,Highway Maintenance Workers,Construction Craft Heavy / Highway Laborer,AGC Maine,apprenticeship,Apprenticeship,https://buildingmaine.com/pre-apprenticeship,agc_apprenticeship
+47-4061,Rail-Track Laying Equipment,Maine Construction Academy (MCA),Workforce Initiative,bootcamp,"Immersion Programs: 4-week, tuition-free intensive training in high-demand trades. Includes hands-on skills and guaranteed job interviews.",https://buildingmaine.com/immersion-program,workforce_initiative
