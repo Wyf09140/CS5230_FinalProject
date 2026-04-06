@@ -1,9 +1,9 @@
 soc_code,occ_title,program_name,college,program_type,credential,url,source
-11-9021,Construction Managers,Maine Workforce Development Compact,Workforce Initiative,bootcamp,"Grants up to $1,200 per employee for construction firms to train staff in safety, project management, or new technical skills.",https://www.mccs.me.edu/workforce-training/maine-workforce-development-compact/,workforce_initiative
-11-9021,Construction Managers,Construction Engineering Technology,UMaine,university,B.S.,https://go.umaine.edu/find-a-major/construction-engineering-technology/,umaine
-11-9041,Architectural & Engineering Managers,Mechanical Engineering,UMaine,university,B.S.,https://mcec.umaine.edu/mee/,umaine
-11-9041,Architectural & Engineering Managers,Mechanical Engineering,USM,university,B.S.,https://usm.maine.edu/department-engineering/mechanical-engineering/,umaine
-11-9041,Architectural & Engineering Managers,Industrial Engineering,USM,university,B.S.,https://usm.maine.edu/department-engineering/industrial-engineering/,umaine
+Nov-21,Construction Managers,Maine Workforce Development Compact,Workforce Initiative,bootcamp,"Grants up to $1,200 per employee for construction firms to train staff in safety, project management, or new technical skills.",https://www.mccs.me.edu/workforce-training/maine-workforce-development-compact/,workforce_initiative
+Nov-21,Construction Managers,Construction Engineering Technology,UMaine,university,B.S.,https://go.umaine.edu/find-a-major/construction-engineering-technology/,umaine
+Nov-41,Architectural & Engineering Managers,Mechanical Engineering,UMaine,university,B.S.,https://mcec.umaine.edu/mee/,umaine
+Nov-41,Architectural & Engineering Managers,Mechanical Engineering,USM,university,B.S.,https://usm.maine.edu/department-engineering/mechanical-engineering/,umaine
+Nov-41,Architectural & Engineering Managers,Industrial Engineering,USM,university,B.S.,https://usm.maine.edu/department-engineering/industrial-engineering/,umaine
 17-2051,Civil Engineers,Transfer ME (Pre-Engineering),Workforce Initiative,bootcamp,Proactive transfer pathway for students with 30+ credits to move from MCCS to University of Maine Engineering programs.,https://legislature.maine.gov/doc/12341,workforce_initiative
 17-2051,Civil Engineers,Advanced Technology Centers,Workforce Initiative,bootcamp,"Hands-on labs at SMCC (Brunswick) for Robotics, Hydraulics, and Electrical Simulation training.",,workforce_initiative
 17-2051,Civil Engineers,Construction Engineering Technology,UMaine,university,B.S.,https://go.umaine.edu/find-a-major/construction-engineering-technology/,umaine
