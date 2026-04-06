@@ -10,7 +10,7 @@ EXCEL = 'Download_data/Career Drive Project Data Sources.xlsx'
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 MODEL  = "llama-3.3-70b-versatile"
 
-# 21个职业的 SOC codes（来自 D1）
+# SOC codes for 21 occupations (from D1)
 ALL_SOC = {
     "11-3013": "Facilities Managers",
     "11-9021": "Construction Managers",
@@ -35,10 +35,10 @@ ALL_SOC = {
     "53-7021": "Crane and Tower Operators",
 }
 
-# General Contractors → 全量蓝领 SOC
+# General Contractors → full blue-collar SOC list
 GC_SOC = [k for k in ALL_SOC if k.startswith("47") or k in ("11-9021","11-1011","53-7021")]
 
-# ── 1. 读取 AGC Member List ───────────────────────────────────────────────────
+# ── 1. Load AGC Member List ───────────────────────────────────────────────────
 wb = load_workbook(EXCEL)
 ws_agc = wb['AGC Member list ']
 
@@ -51,14 +51,14 @@ for row in ws_agc.iter_rows(min_row=4, values_only=True):
 df_agc = pd.DataFrame(rows)
 print(f"AGC: {len(df_agc)} rows — GC:{(df_agc.agc_type=='General Contractors').sum()}, SC:{(df_agc.agc_type=='Specialty Contractors').sum()}")
 
-# ── 2. 读取 DOT Prequal URLs ──────────────────────────────────────────────────
+# ── 2. Load DOT Prequal URLs ──────────────────────────────────────────────────
 ws_dot = wb['JobBoards -DOT Prequal List']
 dot_urls = {}
 for row in ws_dot.iter_rows(min_row=2):
     company = row[0].value
     cell_b  = row[1]
     url = cell_b.hyperlink.target if cell_b.hyperlink else None
-    # 排除纯文字备注（无超链接）
+    # Skip rows without hyperlinks
     if company and url:
         dot_urls[company.strip().lower()] = url
 
@@ -103,13 +103,13 @@ Examples:
     except:
         return ["GENERAL"]
 
-# 只对 Specialty Contractors 跑 LLM
+# Run LLM mapping only for Specialty Contractors
 sc_df = df_agc[df_agc.agc_type == 'Specialty Contractors'].copy()
 print(f"\nRunning LLM mapping for {len(sc_df)} Specialty Contractors...")
 
 CACHE_FILE = 'Output_data/soc_mapping_cache.json'
 
-# 读缓存
+# Load cache
 if os.path.exists(CACHE_FILE):
     with open(CACHE_FILE, 'r') as f:
         soc_results = json.load(f)
@@ -117,7 +117,7 @@ if os.path.exists(CACHE_FILE):
 else:
     soc_results = {}
 
-# 只跑没有缓存的公司
+# Only map companies not yet in cache
 to_map = [row for row in sc_df.itertuples() if row.employer_name not in soc_results]
 print(f"To map: {len(to_map)} companies (cached: {len(soc_results)})")
 
@@ -127,25 +127,25 @@ for i, row in enumerate(to_map):
     print(f"  {i+1}/{len(to_map)} {row.employer_name} → {codes}")
     time.sleep(0.3)
 
-# 保存缓存
+# Save cache
 with open(CACHE_FILE, 'w') as f:
     json.dump(soc_results, f, indent=2)
 
 print("\nLLM mapping done. Cache saved.")
 
-# ── 4. 展开 SOC mapping → 每行一个 soc_code ───────────────────────────────────
+# ── 4. Expand SOC mapping → one row per soc_code ─────────────────────────────
 import urllib.parse
 
 records = []
 
-# GC_SOC 修正：确保包含 11-9021
+# GC_SOC fix: ensure 11-9021 is included
 GC_SOC_FINAL = [k for k in ALL_SOC if k.startswith("47") or k in ("11-9021", "53-7021")]
 
 for _, row in df_agc.iterrows():
     name = row['employer_name']
     atype = row['agc_type']
 
-    # 确定 SOC codes
+    # Determine SOC codes
     if atype == 'General Contractors':
         soc_codes = GC_SOC_FINAL
     else:
@@ -155,7 +155,7 @@ for _, row in df_agc.iterrows():
         else:
             soc_codes = raw_codes
 
-    # 查 DOT URL（严格匹配：公司名规范化后完全匹配）
+    # Look up DOT URL (strict match: normalized company names must match exactly)
     def normalize(s):
         return s.lower().strip().rstrip('.,inc lc').strip()
 
@@ -165,7 +165,7 @@ for _, row in df_agc.iterrows():
         if normalize(dot_name) == name_lower:
             matched_url = dot_url
             break
-        # 次级匹配：dot_name 是 agc_name 的子串（至少6字符）
+        # Secondary match: dot_name is a substring of agc_name (min 6 chars)
         dn = normalize(dot_name)
         if len(dn) >= 6 and dn in name_lower:
             matched_url = dot_url
@@ -214,7 +214,7 @@ jb_urls = {
     'USAJobs.gov':               'https://www.usajobs.gov/',
 }
 
-# Job board → SOC mapping（手动定义）
+# Job board → SOC mapping (manually defined)
 JB_SOC_MAP = {
     'MaineDOT Careers':         ['17-2051.01','47-2073','47-2061','47-1011'],
     'Maine Turnpike Authority':  ['47-2073','17-3022','47-1011'],
@@ -262,7 +262,7 @@ for board_name, soc_codes in JB_SOC_MAP.items():
             'source_type':   'job_board',
         })
 
-# ── 6. 输出 ───────────────────────────────────────────────────────────────────
+# ── 6. Output ─────────────────────────────────────────────────────────────────
 df_out = pd.DataFrame(records)
 df_out = df_out.drop_duplicates(subset=['soc_code','employer_name'])
 df_out = df_out.sort_values(['soc_code','source_type','employer_name'])
