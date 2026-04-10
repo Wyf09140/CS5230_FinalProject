@@ -1,0 +1,216 @@
+{
+  "n_topics": 8,
+  "n_top_words": 10,
+  "max_features": 300,
+  "ngram_range": [
+    1,
+    2
+  ],
+  "method": "both",
+  "topic_labels": {
+    "0": "Heavy Equipment Operation",
+    "1": "Blueprint Reading & Planning",
+    "2": "Structural Installation",
+    "3": "Electrical & Mechanical Systems",
+    "4": "Project Management & Coordination",
+    "5": "Safety & Compliance",
+    "6": "Civil & Site Work",
+    "7": "Supervision & Leadership"
+  },
+  "lda_top_words": {
+    "0": [
+      "management",
+      "equipment",
+      "resources",
+      "analysis",
+      "control",
+      "resources management",
+      "monitoring",
+      "active",
+      "operations",
+      "systems"
+    ],
+    "1": [
+      "metal",
+      "drywall",
+      "walls",
+      "ceilings",
+      "trim",
+      "tile",
+      "nails",
+      "frames",
+      "tiles",
+      "between"
+    ],
+    "2": [
+      "track",
+      "rails",
+      "damaged",
+      "machines",
+      "equipment",
+      "analysis",
+      "sections",
+      "operate",
+      "management",
+      "control"
+    ],
+    "3": [
+      "pipe",
+      "pipes",
+      "fixtures",
+      "water",
+      "install",
+      "structures",
+      "fittings",
+      "plumbing",
+      "supports",
+      "hand power"
+    ],
+    "4": [
+      "systems",
+      "equipment",
+      "resources",
+      "management",
+      "analysis",
+      "construction",
+      "design",
+      "material",
+      "control",
+      "resources management"
+    ],
+    "5": [
+      "maintenance",
+      "hand",
+      "materials",
+      "writing",
+      "holes",
+      "concrete",
+      "progress",
+      "floor",
+      "critical thinking",
+      "parts"
+    ],
+    "6": [
+      "equipment",
+      "management",
+      "systems",
+      "analysis",
+      "resources",
+      "control",
+      "design",
+      "construction",
+      "operations",
+      "learning"
+    ],
+    "7": [
+      "equipment",
+      "management",
+      "steel",
+      "members",
+      "steel members",
+      "design",
+      "systems",
+      "pipe",
+      "learning",
+      "control"
+    ]
+  },
+  "nmf_top_words": {
+    "0": [
+      "writing speaking",
+      "writing",
+      "wiring equipment",
+      "wiring",
+      "wires",
+      "welding",
+      "water",
+      "walls",
+      "verify",
+      "units"
+    ],
+    "1": [
+      "writing speaking",
+      "writing",
+      "wiring equipment",
+      "wiring",
+      "wires",
+      "welding",
+      "water",
+      "walls",
+      "verify",
+      "units"
+    ],
+    "2": [
+      "writing speaking",
+      "writing",
+      "wiring equipment",
+      "wiring",
+      "wires",
+      "welding",
+      "water",
+      "walls",
+      "verify",
+      "units"
+    ],
+    "3": [
+      "writing speaking",
+      "writing",
+      "wiring equipment",
+      "wiring",
+      "wires",
+      "welding",
+      "water",
+      "walls",
+      "verify",
+      "units"
+    ],
+    "4": [
+      "writing speaking",
+      "writing",
+      "wiring equipment",
+      "wiring",
+      "wires",
+      "welding",
+      "water",
+      "walls",
+      "verify",
+      "units"
+    ],
+    "5": [
+      "writing speaking",
+      "writing",
+      "wiring equipment",
+      "wiring",
+      "wires",
+      "welding",
+      "water",
+      "walls",
+      "verify",
+      "units"
+    ],
+    "6": [
+      "writing speaking",
+      "writing",
+      "wiring equipment",
+      "wiring",
+      "wires",
+      "welding",
+      "water",
+      "walls",
+      "verify",
+      "units"
+    ],
+    "7": [
+      "writing speaking",
+      "writing",
+      "wiring equipment",
+      "wiring",
+      "wires",
+      "welding",
+      "water",
+      "walls",
+      "verify",
+      "units"
+    ]
+  }
+}

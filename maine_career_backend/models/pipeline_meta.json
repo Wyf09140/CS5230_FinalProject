@@ -1,0 +1,32 @@
+{
+  "k_clusters": 4,
+  "silhouette_score": 0.0609,
+  "embedding_model": "SBERT (all-MiniLM-L6-v2)",
+  "embedding_dim": 512,
+  "wage_blend_weight": 0.35,
+  "n_occupations": 21,
+  "tier_wage_labels": {
+    "Tier 1 \u2014 Entry/Support": "< $55,000",
+    "Tier 2 \u2014 Technical Core": "$55,000 \u2013 $79,999",
+    "Tier 3 \u2014 Senior/Specialist": "$80,000 \u2013 $109,999",
+    "Tier 4 \u2014 Leadership/Expert": "$110,000+"
+  },
+  "cluster_summary": {
+    "0": {
+      "n_occupations": 1,
+      "median_wage": 47380.0
+    },
+    "1": {
+      "n_occupations": 5,
+      "median_wage": 61890.0
+    },
+    "2": {
+      "n_occupations": 9,
+      "median_wage": 62730.0
+    },
+    "3": {
+      "n_occupations": 6,
+      "median_wage": 94950.0
+    }
+  }
+}

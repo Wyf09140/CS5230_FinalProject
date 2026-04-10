@@ -1,0 +1,41 @@
+{
+  "embedding_model": "SBERT (all-MiniLM-L6-v2)",
+  "embedding_dim": 512,
+  "wage_blend_weight": 0.35,
+  "n_occupations": 21,
+  "methods": {
+    "kmeans": {
+      "silhouette": 0.0609,
+      "n_clusters": 4,
+      "model_file": "kmeans_model.pkl"
+    },
+    "gmm": {
+      "silhouette": 0.0565,
+      "n_clusters": 3,
+      "model_file": "gmm_model.pkl"
+    },
+    "agglomerative": {
+      "silhouette": 0.0661,
+      "n_clusters": 5,
+      "model_file": "hierarchical_model.pkl"
+    },
+    "hdbscan": {
+      "silhouette": 0.0837,
+      "n_clusters": 2,
+      "model_file": "hdbscan_model.pkl"
+    }
+  },
+  "best_method_hints": {
+    "overall": "hdbscan",
+    "progress": "kmeans",
+    "pivot": "gmm",
+    "field_change": "agglomerative",
+    "skill_match": "hdbscan"
+  },
+  "silhouette_ranking": [
+    "hdbscan",
+    "agglomerative",
+    "kmeans",
+    "gmm"
+  ]
+}

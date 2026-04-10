@@ -1,0 +1,191 @@
+{
+  "11-9021": {
+    "occ_title": "Construction Managers",
+    "wealth_tier": "Tier 3 \u2014 Senior/Specialist",
+    "median_wage_me": 104060.0,
+    "cluster_kmeans": 3,
+    "cluster_gmm": 2,
+    "cluster_agglom": 4,
+    "cluster_hdbscan": 1
+  },
+  "47-2031": {
+    "occ_title": "Carpenters",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 59190.0,
+    "cluster_kmeans": 1,
+    "cluster_gmm": 1,
+    "cluster_agglom": 2,
+    "cluster_hdbscan": 0
+  },
+  "47-2111": {
+    "occ_title": "Electricians",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 67820.0,
+    "cluster_kmeans": 1,
+    "cluster_gmm": 1,
+    "cluster_agglom": 2,
+    "cluster_hdbscan": 0
+  },
+  "47-2221": {
+    "occ_title": "Structural Iron and Steel Workers",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 62730.0,
+    "cluster_kmeans": 2,
+    "cluster_gmm": 1,
+    "cluster_agglom": 3,
+    "cluster_hdbscan": -1
+  },
+  "47-2152": {
+    "occ_title": "Plumbers & Pipefitters",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 61890.0,
+    "cluster_kmeans": 1,
+    "cluster_gmm": 1,
+    "cluster_agglom": 2,
+    "cluster_hdbscan": 0
+  },
+  "47-2081": {
+    "occ_title": "Drywall & Ceiling Tile Installers",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 60060.0,
+    "cluster_kmeans": 1,
+    "cluster_gmm": 1,
+    "cluster_agglom": 2,
+    "cluster_hdbscan": 0
+  },
+  "47-2132": {
+    "occ_title": "Insulation Workers, Mechanical",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 61980.0,
+    "cluster_kmeans": 2,
+    "cluster_gmm": 1,
+    "cluster_agglom": 2,
+    "cluster_hdbscan": 0
+  },
+  "47-4021": {
+    "occ_title": "Elevator & Escalator Installers",
+    "wealth_tier": "Tier 4 \u2014 Leadership/Expert",
+    "median_wage_me": 138520.0,
+    "cluster_kmeans": 1,
+    "cluster_gmm": 1,
+    "cluster_agglom": 2,
+    "cluster_hdbscan": 0
+  },
+  "17-2051": {
+    "occ_title": "Civil Engineers",
+    "wealth_tier": "Tier 3 \u2014 Senior/Specialist",
+    "median_wage_me": 94880.0,
+    "cluster_kmeans": 3,
+    "cluster_gmm": 2,
+    "cluster_agglom": 4,
+    "cluster_hdbscan": 1
+  },
+  "17-2051.01": {
+    "occ_title": "Transportation Engineers",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 70510.0,
+    "cluster_kmeans": 3,
+    "cluster_gmm": 2,
+    "cluster_agglom": 4,
+    "cluster_hdbscan": 1
+  },
+  "47-2071": {
+    "occ_title": "Paving & Tamping Operators",
+    "wealth_tier": "Tier 1 \u2014 Entry/Support",
+    "median_wage_me": 54340.0,
+    "cluster_kmeans": 2,
+    "cluster_gmm": 0,
+    "cluster_agglom": 1,
+    "cluster_hdbscan": 0
+  },
+  "47-2073": {
+    "occ_title": "Operating Engineers",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 55170.0,
+    "cluster_kmeans": 2,
+    "cluster_gmm": 0,
+    "cluster_agglom": 1,
+    "cluster_hdbscan": 0
+  },
+  "47-4051": {
+    "occ_title": "Highway Maintenance Workers",
+    "wealth_tier": "Tier 1 \u2014 Entry/Support",
+    "median_wage_me": 47380.0,
+    "cluster_kmeans": 0,
+    "cluster_gmm": 0,
+    "cluster_agglom": 0,
+    "cluster_hdbscan": -1
+  },
+  "47-2151": {
+    "occ_title": "Pipelayers",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 59020.0,
+    "cluster_kmeans": 2,
+    "cluster_gmm": 0,
+    "cluster_agglom": 2,
+    "cluster_hdbscan": 0
+  },
+  "47-2072": {
+    "occ_title": "Pile Driver Operators",
+    "wealth_tier": "Tier 4 \u2014 Leadership/Expert",
+    "median_wage_me": 113360.0,
+    "cluster_kmeans": 2,
+    "cluster_gmm": 2,
+    "cluster_agglom": 3,
+    "cluster_hdbscan": -1
+  },
+  "47-2171": {
+    "occ_title": "Reinforcing Iron & Rebar Workers",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 66932.64705882352,
+    "cluster_kmeans": 2,
+    "cluster_gmm": 1,
+    "cluster_agglom": 3,
+    "cluster_hdbscan": 0
+  },
+  "47-4061": {
+    "occ_title": "Rail-Track Laying Equipment",
+    "wealth_tier": "Tier 3 \u2014 Senior/Specialist",
+    "median_wage_me": 82840.0,
+    "cluster_kmeans": 2,
+    "cluster_gmm": 1,
+    "cluster_agglom": 1,
+    "cluster_hdbscan": -1
+  },
+  "47-1011": {
+    "occ_title": "First-Line Supervisors",
+    "wealth_tier": "Tier 2 \u2014 Technical Core",
+    "median_wage_me": 75720.0,
+    "cluster_kmeans": 3,
+    "cluster_gmm": 2,
+    "cluster_agglom": 4,
+    "cluster_hdbscan": 1
+  },
+  "13-1082": {
+    "occ_title": "Project Management Specialists",
+    "wealth_tier": "Tier 3 \u2014 Senior/Specialist",
+    "median_wage_me": 85420.0,
+    "cluster_kmeans": 2,
+    "cluster_gmm": 2,
+    "cluster_agglom": 3,
+    "cluster_hdbscan": -1
+  },
+  "11-9041": {
+    "occ_title": "Architectural & Engineering Managers",
+    "wealth_tier": "Tier 4 \u2014 Leadership/Expert",
+    "median_wage_me": 140430.0,
+    "cluster_kmeans": 3,
+    "cluster_gmm": 2,
+    "cluster_agglom": 4,
+    "cluster_hdbscan": 1
+  },
+  "11-3013": {
+    "occ_title": "Facilities Managers",
+    "wealth_tier": "Tier 3 \u2014 Senior/Specialist",
+    "median_wage_me": 95020.0,
+    "cluster_kmeans": 3,
+    "cluster_gmm": 2,
+    "cluster_agglom": 4,
+    "cluster_hdbscan": 1
+  }
+}

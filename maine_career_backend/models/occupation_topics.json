@@ -1,0 +1,779 @@
+{
+  "11-9021": {
+    "occ_title": "Construction Managers",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.997
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.0
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2031": {
+    "occ_title": "Carpenters",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.525
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.388
+      },
+      {
+        "topic_id": 1,
+        "label": "Blueprint Reading & Planning",
+        "weight": 0.053
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2111": {
+    "occ_title": "Electricians",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.997
+      },
+      {
+        "topic_id": 1,
+        "label": "Blueprint Reading & Planning",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.0
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2221": {
+    "occ_title": "Structural Iron and Steel Workers",
+    "lda_topics": [
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.997
+      },
+      {
+        "topic_id": 1,
+        "label": "Blueprint Reading & Planning",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2152": {
+    "occ_title": "Plumbers & Pipefitters",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.541
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.309
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.149
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2081": {
+    "occ_title": "Drywall & Ceiling Tile Installers",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.402
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.332
+      },
+      {
+        "topic_id": 1,
+        "label": "Blueprint Reading & Planning",
+        "weight": 0.264
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2132": {
+    "occ_title": "Insulation Workers, Mechanical",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.996
+      },
+      {
+        "topic_id": 1,
+        "label": "Blueprint Reading & Planning",
+        "weight": 0.001
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-4021": {
+    "occ_title": "Elevator & Escalator Installers",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.997
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 1,
+        "label": "Blueprint Reading & Planning",
+        "weight": 0.0
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "17-2051": {
+    "occ_title": "Civil Engineers",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.996
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.001
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "17-2051.01": {
+    "occ_title": "Transportation Engineers",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.997
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.0
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2071": {
+    "occ_title": "Paving & Tamping Operators",
+    "lda_topics": [
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.996
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.001
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2073": {
+    "occ_title": "Operating Engineers",
+    "lda_topics": [
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.997
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-4051": {
+    "occ_title": "Highway Maintenance Workers",
+    "lda_topics": [
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.996
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.001
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2151": {
+    "occ_title": "Pipelayers",
+    "lda_topics": [
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.916
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.081
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2072": {
+    "occ_title": "Pile Driver Operators",
+    "lda_topics": [
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.995
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.001
+      },
+      {
+        "topic_id": 1,
+        "label": "Blueprint Reading & Planning",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-2171": {
+    "occ_title": "Reinforcing Iron & Rebar Workers",
+    "lda_topics": [
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.996
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.001
+      },
+      {
+        "topic_id": 1,
+        "label": "Blueprint Reading & Planning",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-4061": {
+    "occ_title": "Rail-Track Laying Equipment",
+    "lda_topics": [
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.996
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.001
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "47-1011": {
+    "occ_title": "First-Line Supervisors",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.996
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.001
+      },
+      {
+        "topic_id": 1,
+        "label": "Blueprint Reading & Planning",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "13-1082": {
+    "occ_title": "Project Management Specialists",
+    "lda_topics": [
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.984
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.002
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.002
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "11-9041": {
+    "occ_title": "Architectural & Engineering Managers",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.996
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.001
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  },
+  "11-3013": {
+    "occ_title": "Facilities Managers",
+    "lda_topics": [
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.995
+      },
+      {
+        "topic_id": 0,
+        "label": "Heavy Equipment Operation",
+        "weight": 0.001
+      },
+      {
+        "topic_id": 3,
+        "label": "Electrical & Mechanical Systems",
+        "weight": 0.001
+      }
+    ],
+    "nmf_topics": [
+      {
+        "topic_id": 7,
+        "label": "Supervision & Leadership",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 6,
+        "label": "Civil & Site Work",
+        "weight": 0.0
+      },
+      {
+        "topic_id": 5,
+        "label": "Safety & Compliance",
+        "weight": 0.0
+      }
+    ]
+  }
+}
