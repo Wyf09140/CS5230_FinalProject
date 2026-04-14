@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maine Career Navigator</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; background: #f5f4f0; color: #1a1a1a; }
+
+  .header { background: #1a2332; color: white; padding: 1.5rem 2rem; }
+  .header h1 { font-size: 20px; font-weight: 500; }
+  .header p { font-size: 13px; opacity: 0.6; margin-top: 4px; }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+  .search-card {
+    background: white; border-radius: 12px;
+    border: 0.5px solid #e0ddd5; padding: 1.5rem; margin-bottom: 2rem;
+  }
+  .search-card h2 { font-size: 15px; font-weight: 500; margin-bottom: 1rem; }
+  .search-row { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+  .field { flex: 1; min-width: 180px; }
+  .field label { display: block; font-size: 12px; color: #666; margin-bottom: 6px; }
+  .field select, .field input {
+    width: 100%; padding: 8px 12px;
+    border: 0.5px solid #ccc; border-radius: 8px;
+    font-size: 14px; background: white; color: #1a1a1a;
+  }
+  .mode-group { display: flex; gap: 8px; }
+  .mode-btn {
+    flex: 1; padding: 8px 12px; border: 0.5px solid #ccc;
+    border-radius: 8px; font-size: 13px; cursor: pointer;
+    background: white; color: #555; transition: all 0.15s;
+  }
+  .mode-btn.active { background: #1a2332; color: white; border-color: #1a2332; }
+  .search-btn {
+    padding: 9px 24px; background: #2563eb; color: white;
+    border: none; border-radius: 8px; font-size: 14px; cursor: pointer;
+  }
+  .search-btn:disabled { background: #aaa; cursor: not-allowed; }
+
+  .error-msg {
+    background: #fef2f2; border: 0.5px solid #fca5a5;
+    color: #b91c1c; border-radius: 8px; padding: 10px 14px;
+    font-size: 13px; margin-bottom: 1rem;
+  }
+  .loading-msg {
+    text-align: center; color: #888; font-size: 14px;
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    font-size: 13px; font-weight: 500; color: #888;
+    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;
+  }
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 2rem; }
+
+  .pathway-card {
+    background: white; border-radius: 12px;
+    border: 0.5px solid #e0ddd5; padding: 1.25rem;
+    position: relative; overflow: hidden;
+  }
+  .rank-badge {
+    position: absolute; top: 12px; right: 12px;
+    font-size: 11px; background: #f0f0ea; color: #555;
+    padding: 2px 8px; border-radius: 20px;
+  }
+  .pathway-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 4px; padding-right: 60px; }
+  .soc { font-size: 11px; color: #aaa; margin-bottom: 12px; }
+
+  .wage-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+  .wage-from { font-size: 13px; color: #888; }
+  .wage-arrow { font-size: 12px; color: #bbb; }
+  .wage-to { font-size: 18px; font-weight: 500; }
+  .wage-uplift { font-size: 12px; background: #eaf3de; color: #3b6d11; padding: 2px 8px; border-radius: 20px; }
+
+  .match-bar-wrap { margin-bottom: 12px; }
+  .match-label { display: flex; justify-content: space-between; font-size: 12px; color: #888; margin-bottom: 4px; }
+  .match-bar { height: 4px; background: #eee; border-radius: 2px; }
+  .match-fill { height: 100%; border-radius: 2px; background: #2563eb; }
+
+  .skills-section { margin-bottom: 12px; }
+  .skills-label { font-size: 11px; color: #aaa; margin-bottom: 6px; }
+  .skills-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .skill-tag { font-size: 11px; background: #faeeda; color: #854f0b; padding: 2px 8px; border-radius: 20px; }
+
+  .links-section { border-top: 0.5px solid #eee; padding-top: 10px; margin-top: 10px; }
+  .links-label { font-size: 11px; color: #aaa; margin-bottom: 6px; }
+  .link-item {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 12px; color: #2563eb; text-decoration: none; margin-bottom: 4px;
+  }
+  .link-item:hover { text-decoration: underline; }
+  .link-dot { width: 5px; height: 5px; border-radius: 50%; background: #2563eb; flex-shrink: 0; }
+  .employer-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #444; margin-bottom: 4px; }
+  .emp-dot { width: 5px; height: 5px; border-radius: 50%; background: #888; flex-shrink: 0; }
+
+  .galaxy-card {
+    background: white; border-radius: 12px;
+    border: 0.5px solid #e0ddd5; padding: 1.25rem; margin-bottom: 2rem;
+  }
+
+  .export-bar { display: flex; justify-content: flex-end; margin-bottom: 2rem; }
+  .export-btn {
+    padding: 8px 20px; border: 0.5px solid #ccc;
+    border-radius: 8px; font-size: 13px; cursor: pointer; background: white; color: #444;
+  }
+
+  @media print {
+    .search-card, .export-bar, .header, .galaxy-card { display: none; }
+    body { background: white; }
+    .pathway-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Maine Construction Career Navigator</h1>
+  <p>Find higher-paying pathways in under 60 seconds</p>
+</div>
+
+<div class="container">
+  <div class="search-card">
+    <h2>Where are you now?</h2>
+    <div class="search-row">
+      <div class="field">
+        <label>Current job title</label>
+        <select id="jobSelect"><option value="">Loading...</option></select>
+      </div>
+      <div class="field">
+        <label>Goal</label>
+        <div class="mode-group">
+          <button class="mode-btn active" onclick="setMode(this,'progress')">Move up in trade</button>
+          <button class="mode-btn" onclick="setMode(this,'pivot')">Switch field</button>
+          <button class="mode-btn" onclick="setMode(this,'field_change')">Any field</button>
+        </div>
+      </div>
+      <button class="search-btn" id="searchBtn" onclick="search()">Find pathways</button>
+    </div>
+  </div>
+
+  <div id="errorBox" class="error-msg" style="display:none;"></div>
+  <div id="loadingBox" class="loading-msg" style="display:none;">Finding your pathways...</div>
+
+  <div id="results" style="display:none;">
+    <div class="section-title">Wealth Galaxy</div>
+    <div class="galaxy-card">
+      <canvas id="galaxyChart" height="260"></canvas>
+    </div>
+    <div class="section-title">Top pathways</div>
+    <div class="cards-grid" id="cardsContainer"></div>
+    <div class="export-bar">
+      <button class="export-btn" onclick="window.print()">Export as PDF</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const API = 'http://localhost:8000';
+  let currentMode = 'progress';
+  let currentWage = null;
+  let galaxyChart = null;
+
+  function setMode(btn, mode) {
+    document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentMode = mode;
+  }
+
+  function showError(msg) {
+    const el = document.getElementById('errorBox');
+    el.textContent = msg;
+    el.style.display = 'block';
+  }
+  function clearError() { document.getElementById('errorBox').style.display = 'none'; }
+
+  // -- Load occupations dropdown on page load
+  async function loadOccupations() {
+    try {
+      const res = await fetch(`${API}/occupations`);
+      const data = await res.json();
+      const sel = document.getElementById('jobSelect');
+      sel.innerHTML = '<option value="">Select occupation...</option>';
+      data.occupations.forEach(o => {
+        const opt = document.createElement('option');
+        opt.value = o.soc_code;
+        opt.textContent = `${o.occ_title} — $${Math.round(o.median_wage_me / 1000)}k`;
+        opt.dataset.wage = o.median_wage_me;
+        sel.appendChild(opt);
+      });
+      sel.onchange = () => {
+        const opt = sel.options[sel.selectedIndex];
+        currentWage = opt.dataset.wage ? parseFloat(opt.dataset.wage) : null;
+      };
+    } catch (e) {
+      document.getElementById('jobSelect').innerHTML = '<option value="">API unavailable — using mock data</option>';
+      loadMockOccupations();
+    }
+  }
+
+  function loadMockOccupations() {
+    const mock = [
+      { soc_code: '47-2031', occ_title: 'Carpenters', median_wage_me: 48230 },
+      { soc_code: '47-2061', occ_title: 'Construction Laborers', median_wage_me: 38000 },
+      { soc_code: '47-2111', occ_title: 'Electricians', median_wage_me: 61200 },
+      { soc_code: '47-1011', occ_title: 'First-Line Supervisors', median_wage_me: 68400 },
+      { soc_code: '11-9021', occ_title: 'Construction Managers', median_wage_me: 89500 },
+    ];
+    const sel = document.getElementById('jobSelect');
+    sel.innerHTML = '<option value="">Select occupation...</option>';
+    mock.forEach(o => {
+      const opt = document.createElement('option');
+      opt.value = o.soc_code;
+      opt.textContent = `${o.occ_title} — $${Math.round(o.median_wage_me / 1000)}k`;
+      opt.dataset.wage = o.median_wage_me;
+      sel.appendChild(opt);
+    });
+  }
+
+  // -- Search
+  async function search() {
+    clearError();
+    const soc = document.getElementById('jobSelect').value;
+    if (!soc) { showError('Please select a job title first.'); return; }
+
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('loadingBox').style.display = 'block';
+    document.getElementById('searchBtn').disabled = true;
+
+    try {
+      const body = { soc_code: soc, mode: currentMode, top_n: 3 };
+      if (currentWage) body.user_current_wage = currentWage;
+
+      const [recRes, tierRes] = await Promise.all([
+        fetch(`${API}/recommend`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        }),
+        fetch(`${API}/wealth-tiers`)
+      ]);
+
+      if (!recRes.ok) throw new Error(`API error: ${recRes.status}`);
+      const recData = await recRes.json();
+      const tierData = tierRes.ok ? await tierRes.json() : null;
+
+      document.getElementById('loadingBox').style.display = 'none';
+      document.getElementById('results').style.display = 'block';
+
+      renderCards(recData);
+      renderGalaxy(tierData, soc, recData);
+      document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+
+    } catch (e) {
+      document.getElementById('loadingBox').style.display = 'none';
+      showError('Could not reach API. Make sure the backend is running at localhost:8000.');
+      // fallback to mock
+      renderCards(null);
+      renderGalaxy(null, soc, null);
+      document.getElementById('results').style.display = 'block';
+    } finally {
+      document.getElementById('searchBtn').disabled = false;
+    }
+  }
+
+  // -- Render pathway cards
+  function renderCards(data) {
+    const container = document.getElementById('cardsContainer');
+    const pathways = data?.pathways ?? MOCK_PATHWAYS;
+
+    container.innerHTML = pathways.map((p, i) => {
+      const fromWage = data?.current_occupation?.median_wage_me ?? 48230;
+      const toWage = p.target_occupation?.median_wage_me ?? p.median_wage_me ?? 68000;
+      const uplift = toWage - fromWage;
+      const upliftPct = Math.round((uplift / fromWage) * 100);
+      const matchPct = Math.round((p.similarity_score ?? p.match_pct ?? 0.8) * 100);
+      const title = p.target_occupation?.occ_title ?? p.occ_title ?? 'Unknown';
+      const soc = p.target_occupation?.soc_code ?? p.soc_code ?? '';
+      const skills = p.skills_to_acquire ?? p.missing_skills ?? [];
+      const programs = p.training_programs ?? [];
+      const employers = p.maine_employers ?? [];
+
+      return `
+        <div class="pathway-card">
+          <span class="rank-badge">#${i + 1} match</span>
+          <h3>${title}</h3>
+          <div class="soc">${soc}</div>
+          <div class="wage-row">
+            <span class="wage-from">$${Math.round(fromWage / 1000)}k</span>
+            <span class="wage-arrow">→</span>
+            <span class="wage-to">$${Math.round(toWage / 1000)}k</span>
+            <span class="wage-uplift">+${upliftPct}%</span>
+          </div>
+          <div class="match-bar-wrap">
+            <div class="match-label"><span>Skill match</span><span>${matchPct}%</span></div>
+            <div class="match-bar"><div class="match-fill" style="width:${matchPct}%"></div></div>
+          </div>
+          ${skills.length ? `
+          <div class="skills-section">
+            <div class="skills-label">Skills to acquire</div>
+            <div class="skills-tags">${skills.slice(0, 5).map(s => `<span class="skill-tag">${s}</span>`).join('')}</div>
+          </div>` : ''}
+          <div class="links-section">
+            ${programs.length ? `
+              <div class="links-label">Training programs</div>
+              ${programs.slice(0, 3).map(pr => `
+                <a class="link-item" href="${pr.url || '#'}" target="_blank">
+                  <span class="link-dot"></span>${pr.program_name} — ${pr.college}
+                </a>`).join('')}` : ''}
+            ${employers.length ? `
+              <div class="links-label" style="margin-top:8px;">Employers</div>
+              ${employers.slice(0, 3).map(e => `
+                <div class="employer-item">
+                  <span class="emp-dot"></span>
+                  ${e.url ? `<a href="${e.url}" target="_blank" style="color:#2563eb;text-decoration:none;">${e.employer_name}</a>` : e.employer_name}
+                </div>`).join('')}` : ''}
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // -- Galaxy chart
+  function renderGalaxy(tierData, currentSoc, recData) {
+    if (galaxyChart) { galaxyChart.destroy(); galaxyChart = null; }
+    const ctx = document.getElementById('galaxyChart').getContext('2d');
+
+    let points = [], currentPt = null, recommendedSocs = new Set();
+    if (recData?.pathways) recData.pathways.forEach(p => recommendedSocs.add(p.target_occupation?.soc_code));
+
+    if (tierData?.clustering_views?.kmeans?.clusters) {
+      const clusters = tierData.clustering_views.kmeans.clusters;
+      let idx = 0;
+      Object.values(clusters).forEach(cl => {
+        cl.occupations.forEach(o => {
+          const angle = (idx / 21) * 2 * Math.PI;
+          const r = 2 + (o.median_wage_me / 120000) * 3;
+          points.push({
+            x: parseFloat((Math.cos(angle) * r).toFixed(2)),
+            y: parseFloat((Math.sin(angle) * r).toFixed(2)),
+            r: 8 + (o.median_wage_me / 120000) * 8,
+            label: o.occ_title,
+            wage: o.median_wage_me,
+            soc: o.soc_code,
+            isCurrent: o.soc_code === currentSoc,
+            isRecommended: recommendedSocs.has(o.soc_code)
+          });
+          idx++;
+        });
+      });
+    } else {
+      points = MOCK_GALAXY;
+      points.forEach(p => { p.isCurrent = p.soc === currentSoc; p.isRecommended = recommendedSocs.has(p.soc); });
+    }
+
+    const others = points.filter(p => !p.isCurrent && !p.isRecommended);
+    const recommended = points.filter(p => p.isRecommended);
+    const current = points.filter(p => p.isCurrent);
+
+    galaxyChart = new Chart(ctx, {
+      type: 'bubble',
+      data: {
+        datasets: [
+          { label: 'Other occupations', data: others.map(p => ({ x: p.x, y: p.y, r: p.r })), backgroundColor: 'rgba(180,180,170,0.35)', borderColor: 'rgba(150,150,140,0.5)', borderWidth: 1 },
+          { label: 'Recommended', data: recommended.map(p => ({ x: p.x, y: p.y, r: p.r })), backgroundColor: 'rgba(37,99,235,0.25)', borderColor: 'rgba(37,99,235,0.7)', borderWidth: 1.5 },
+          { label: 'You are here', data: current.map(p => ({ x: p.x, y: p.y, r: p.r })), backgroundColor: 'rgba(234,130,50,0.5)', borderColor: 'rgba(200,100,20,0.8)', borderWidth: 2 }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 12 }, boxWidth: 12, padding: 16 } },
+          tooltip: {
+            callbacks: {
+              label: ctx => {
+                const all = [...others, ...recommended, ...current];
+                const pt = all[ctx.dataIndex] || all.find(p => Math.abs(p.x - ctx.raw.x) < 0.1 && Math.abs(p.y - ctx.raw.y) < 0.1);
+                return pt ? `${pt.label}: $${pt.wage?.toLocaleString()}` : '';
+              }
+            }
+          }
+        },
+        scales: {
+          x: { title: { display: true, text: 'Skill similarity →', font: { size: 11 } }, grid: { color: 'rgba(0,0,0,0.05)' } },
+          y: { title: { display: true, text: 'Wage tier →', font: { size: 11 } }, grid: { color: 'rgba(0,0,0,0.05)' } }
+        }
+      }
+    });
+  }
+
+  // -- Mock fallback data
+  const MOCK_PATHWAYS = [
+    { target_occupation: { soc_code: '47-1011', occ_title: 'First-Line Supervisors', median_wage_me: 68400 }, similarity_score: 0.87, skills_to_acquire: ['Crew supervision', 'Project scheduling', 'OSHA compliance'], training_programs: [{ program_name: 'Foreman Apprenticeship', college: 'AGC Maine', url: 'https://buildingmaine.com/pre-apprenticeship' }], maine_employers: [{ employer_name: 'Cianbro Corporation', url: 'https://cianbro.com' }] },
+    { target_occupation: { soc_code: '11-9021', occ_title: 'Construction Managers', median_wage_me: 89500 }, similarity_score: 0.74, skills_to_acquire: ['Budget management', 'Contract negotiation', 'Risk assessment'], training_programs: [{ program_name: 'Construction Management', college: 'UMaine', url: 'https://umaine.edu' }], maine_employers: [{ employer_name: 'PC Construction', url: '#' }] },
+    { target_occupation: { soc_code: '47-2111', occ_title: 'Electricians', median_wage_me: 61200 }, similarity_score: 0.68, skills_to_acquire: ['Electrical code', 'Blueprint reading', 'Conduit bending'], training_programs: [{ program_name: 'Electrician Apprenticeship', college: 'AGC Maine', url: 'https://buildingmaine.com/pre-apprenticeship' }], maine_employers: [{ employer_name: 'Black Bear Electric', url: '#' }] }
+  ];
+  const MOCK_GALAXY = [
+    { x: 1.2, y: 2.1, r: 8, label: 'Laborers', wage: 38000, soc: '47-2061' },
+    { x: 2.5, y: 1.8, r: 12, label: 'Carpenters', wage: 48230, soc: '47-2031' },
+    { x: 3.1, y: 3.2, r: 10, label: 'Electricians', wage: 61200, soc: '47-2111' },
+    { x: 4.2, y: 2.8, r: 13, label: 'Supervisors', wage: 68400, soc: '47-1011' },
+    { x: 5.0, y: 4.1, r: 15, label: 'Managers', wage: 89500, soc: '11-9021' },
+  ];
+
+  loadOccupations();
+</script>
+</body>
+</html>
